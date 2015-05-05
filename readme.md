@@ -1,4 +1,4 @@
-## jQuery Filtering
+## jQuery Filtering && Pagination
 
 In this repository, you will practice implementing a filtering system on a set of DOM attributes.
 
@@ -39,10 +39,13 @@ Knowing that we are going to be filtering the entirety of the cabins on the page
 
 ### Iteration Four | Stretch Goal: Pagination
 
--  Update all the cabins to fall within the same price range. Next, implement a pagination feature which only displays 6 cabins at a time. Your filtering functionality should still work.
-
+-  Update the HTML so that all the cabins fall within the same price range. Next, implement a pagination feature which only displays 6 cabins at a time. Users must click a "Next Page" button to see the next 6 images. Your filtering functionality should still work.
 
 
 ## Useful Snippets
 
-Use `$("input:checked"))` to select all checkboxes that are currently selected.
+-  Use `$("input:checked"))` to select all checkboxes that are currently selected.
+-  It may be helpful to build an object which maps houses to their respective price category. This may be similar to the (Historical Life Expectancy Exercise)[http://eloquentjavascript.net/code/#5.3]
+
+
+Image attribution can be found in images.md
