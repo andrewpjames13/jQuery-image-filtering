@@ -16,7 +16,10 @@ $(document).ready(function() {
 	};
 
 	var lowToggle = function(){
-		$('.low').on('click', function(){
+
+		$('.low').on('click', function(e){
+			e.preventDefault();
+
 			var myArray = $("article");
 			var count = 0;
 
@@ -38,7 +41,9 @@ $(document).ready(function() {
 	};
 
 	var highToggle = function(){
-		$('.high').on('click', function(){
+		$('.high').on('click', function(e){
+			e.preventDefault();
+
 			var myArray = $("article");
 			var count = 0;
 
