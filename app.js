@@ -21,7 +21,6 @@ $(document).ready(function() {
 			var count = 0;
 
 			myArray.sort(function (a, b) {
-
 			    a = parseInt($(a).attr("data-price"), 10);
 			    b = parseInt($(b).attr("data-price"), 10);
 			    count += 2;
@@ -34,11 +33,33 @@ $(document).ready(function() {
 			        return 0;
 			    }
 			});
-
 			$(".image-container").append(myArray);
-
 		});
 	};
+
+	var highToggle = function(){
+		$('.high').on('click', function(){
+			var myArray = $("article");
+			var count = 0;
+
+			myArray.sort(function (a, b) {
+			    a = parseInt($(a).attr("data-price"), 10);
+			    b = parseInt($(b).attr("data-price"), 10);
+			    count += 2;
+
+			    if(a < b) {
+			        return 1;
+			    } else if(a > b) {
+			        return -1;
+			    } else {
+			        return 0;
+			    }
+			});
+			$(".image-container").append(myArray);
+		});
+	};
+
+	highToggle();
 	lowToggle();
 	backgroundToggle();
 });
