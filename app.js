@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+	var homes = $('.home');
 	var backgroundToggle = function(){
 		$('span.dark').on('click', function(){
 			$('body').css('background-image','url(img/dark_wood.png)');
@@ -14,5 +15,30 @@ $(document).ready(function() {
 		});
 	};
 
+	var lowToggle = function(){
+		$('.low').on('click', function(){
+			var myArray = $("article");
+			var count = 0;
+
+			myArray.sort(function (a, b) {
+
+			    a = parseInt($(a).attr("data-price"), 10);
+			    b = parseInt($(b).attr("data-price"), 10);
+			    count += 2;
+
+			    if(a > b) {
+			        return 1;
+			    } else if(a < b) {
+			        return -1;
+			    } else {
+			        return 0;
+			    }
+			});
+
+			$(".image-container").append(myArray);
+
+		});
+	};
+	lowToggle();
 	backgroundToggle();
 });
