@@ -123,7 +123,7 @@ article.home {
 .textures {
 	float: right;
 	height: 50px;
-	width: 100px;
+	width: 150px;
 	background: rgba(255,255,255,0.8);
 	text-align: center;
 	border-radius: 5px;
@@ -147,4 +147,7 @@ span.dark {
 }
 span.light {
 	background: url("img/tileable_wood_texture.png") no-repeat;
+}
+span.forest {
+	background: url("img/forest.jpg") no-repeat;
 }
