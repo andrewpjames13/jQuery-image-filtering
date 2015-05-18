@@ -1,3 +1,8 @@
 $(document).ready(function() {
-	console.log("The document is ready!");
-})
+
+	$('span.dark').on('click', function(){
+		console.log('hi');
+		$('body').css('background-image','url(img/dark_wood.png)');
+	});
+
+});
